@@ -29,7 +29,7 @@
 	</p>
 
       </header>
-      <section>
+	<section>
 	<h3>User Tracking for Analytics</h3>
 		<p>The Google Analytics tracking code works very well and it served as a prototype for what I needed to accomplish which was tracking Facebook users on a third-party site.</p>
 		<pre><code>
@@ -43,6 +43,13 @@
 		Let's break down exactly what going on there. First we are creating a new DOM script element. Also note the setting of HTML5's new async attribute. Async scripts begin to download immediately without pausing your browser's rending engine parser. These scripts then execute at the first opportunity after it finishes downloading and before the window's load event. As a word of caution, async scripts are not guaranteed to be executed in the order they occur in the page.</p><p>
 		Next we set a global variable that will allow use to pass our unique tracker id to the next script. Then we set the source of our new script DOM element to the location of our tracking script hosted on our server. Noted we look at the current documents protocol to decide how to send it. This is key for secure sites that might need that https version of the script.</p><p>
 		Finally we attach our new script directly before the first script on our page (which most likely is our client tracking snippet). Done, our client tracking code is ready to go!</p>
+	</section>
+	<section>
+	<h3>The beauty of testing</h3>
+		If I could pick one thing from my undergraduate career that I use on a daily basis now but was stressed at time with great importance it would be testing. Sure your code had to accomplish particular tasks on data, but what if this data was given in a incorrect way. The beauty of testing is to be able to simulate how your code will react when input or conditions not intended occur.
+		When I wrote code in school most of it was tested on a old Solaris box sitting in a unnamed room in the basement of the Computer Science building. The class TA would untar our code, compile it and then run it on the old Solaris box. If the code did not fail and produced the expected output you received the maximum grade for the assessment. While this is necessary to assign a grade and somehow maintain your sanity as a TA, it does not reflect how that code would run out in the wild.
+		I also had a part-time job working a programmer and administrator for a department on campus. Suddenly my code ran in very distributed system. No longer did I have to consider how my code ran on a single box. I now how to consider how this code would run across multiple boxes and what if an error occurred while the code was running. I began writing test cases for what would happen if the code failed or if certain things occurred. I thought of ways my code could potentially fail. I discovered the beauty of testing which is to design your code to deal with potential problems that might arise. 
+	The tests you write and use will help you not look the fool when software or users do not do as planned. So write those good tests and save yourself and future headache.
 	</section>
 	<footer>
         	<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
